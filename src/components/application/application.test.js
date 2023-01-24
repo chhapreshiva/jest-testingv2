@@ -59,6 +59,7 @@ import Application from "../application/application"
 describe('test application render', ()=>{
     test('child Elements', ()=>{
         render(<Application />)
+        
         const appContainerElement = screen.getByRole('app-container')
         expect(appContainerElement).toBeInTheDocument()
     })

@@ -14,7 +14,7 @@ const LoginForm = ({setIsLogin}) => {
         <label role="email" className="form-label text-start">Email</label>
         <input 
             type="email" 
-            className="form-control" 
+            className="form-control"  
             name="email" 
             placeholder="Enter email" 
             onChange={(e)=> setLoginData({...loginData,email : e.target.value})}

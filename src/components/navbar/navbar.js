@@ -22,6 +22,7 @@ const Navbar = ({isLogin, setIsLogin, setshowLogin}) => {
           <button
             className="navbar-toggler"
             type="button"
+            
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent"

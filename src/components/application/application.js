@@ -11,6 +11,7 @@ const Application = () => {
   return (
     <div role='app-container'>
       <Navbar setshowLogin={setshowLogin} isLogin={isLogin} setIsLogin={setIsLogin} />
+      
       <CenterSection showLogin={showLogin} setIsLogin={setIsLogin} isLogin={isLogin}/>
       <Footer />
     </div>
