@@ -1,4 +1,5 @@
 import { rest } from "msw";
+// console.log("setupServer----------")
 
 export const handlers = () =>[
     // rest.get('https://api.publicapis.org/entries',(req, res, ctx)=>{
@@ -26,8 +27,7 @@ export const handlers = () =>[
                     {name: 'bulbasaur'},
                     {name: 'ivysaur'},
                     {name: 'venusaur'}
-                ]
-            )
+            ])
         )
     })
 ] 

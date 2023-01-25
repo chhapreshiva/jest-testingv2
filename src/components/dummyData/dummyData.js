@@ -1,4 +1,5 @@
 import React,{useEffect, useState} from "react";
+// import fetch from 'isomorphic-fetch'
 
 const DummyData = () => {
 
@@ -7,7 +8,7 @@ const DummyData = () => {
     useEffect(()=>{
         // getDataByApi()
         fetchtoPokemon()
-    },[])
+    },[data])
 
     const getDataByApi = () => {
         const data = fetch('https://api.publicapis.org/entries')
@@ -21,6 +22,7 @@ const DummyData = () => {
         fetch("https://pokeapi.co/api/v2/pokemon?limit=10")
         .then(response => response.json())
         .then(allpokemon => setData(allpokemon.results))
+        .catch((error)=> console.log(error))
       }
 
     return(
@@ -38,7 +40,10 @@ const DummyData = () => {
                     <p className="m-0 text-start">Link :- {val.url}</p>
                 </div>
                 })
-                : null}
+                : 
+                <div>
+                    No DATA FOUND.............
+                </div>}
             </div>
         </>
     )

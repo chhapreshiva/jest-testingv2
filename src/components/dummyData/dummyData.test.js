@@ -13,7 +13,7 @@ describe('dynamic home page render', ()=>{
 
     test('api response', async()=>{
         render(<DummyData />)
-        const cardElements = await screen.findAllByRole('card')
-        expect(cardElements).toHaveLength(10)
+        const cardElements = await screen.queryAllByRole('card',{name : "cardElement"})
+        expect(cardElements).toHaveLength(3)
     })
 })
